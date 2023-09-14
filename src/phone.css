@@ -1,0 +1,39 @@
+.product{
+    /* background-color: aqua; */
+    display: flex;
+    /* display: inline; */
+    flex-direction: row;
+    /* width: 20px; */
+    gap: 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    justify-content: center;
+    align-items: flex-start;
+    width: 1020px;
+    height: 190px;
+}
+
+/* .img{
+    width: 50px;
+} */
+
+.phone{
+    /* background-color: aqua; */
+    width: 100px;
+}
+
+/* div{
+    display: flex;
+    display: inline;
+} */
+
+.phone-pic{
+    width: 183px;
+    height: 190px;
+    margin-left: 34px;
+    margin-right: 34px;
+}
+
+.details{
+    width: auto;
+}
