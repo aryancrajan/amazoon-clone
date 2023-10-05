@@ -1,11 +1,16 @@
+@import url('https://fonts.cdnfonts.com/css/amazon-ember');
+
+body{
+  font-family: 'Amazon Ember', sans-serif;
+}
 .App-header {
   display: inline-flex;
   padding: 10px 10px 10px 16px;
   /* justify-content: flex-end; */
   align-items: center;
   background: #141920;
-  width: 97%;
-  height: 36px;
+  width: 100%;
+  height: 70px;
   margin-bottom: 0px;
 }
 
@@ -14,20 +19,24 @@
   height: 30px;
 }
 
+
+
 .ribbon {
   display: inline-flex;
   padding: 10px 10px 10px 16px;
   /* justify-content: flex-end; */
   align-items: center;  
+  text-align: center;
   background: #252F3D;
-  width: 97%;
-  height: 15px;
+  width: 100%;
+  height:50px;
   margin-top: -5px;
+  vertical-align: middle;
 }
 
 .loc-logo{
-  width: 16px;
-height: 16px;
+  width: 23px;
+  height: 72px;
 flex-shrink: 0;
 margin-top: 8px;
 margin-bottom: 11px;
@@ -39,17 +48,18 @@ margin-right: 2px;
   color: aliceblue;
   margin-right: 20px;
   width: auto;
+  margin-left: -20px;
 }
 
 .ordername {
   color: var(--Primary---White, #FFF);
-font-family: Amazon Ember;
+  font-family: 'Amazon Ember', sans-serif;
 font-size: 12px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
 margin-left: 22px;
-margin-bottom: 21px;
+margin-bottom: 0px;
 margin-right: 34px;
 margin-top: 10px;
 width: auto;
@@ -57,7 +67,7 @@ width: auto;
 
 .orderplace{
   color: var(--Primary---White, #FFF);
-font-family: Amazon Ember;
+  font-family: 'Amazon Ember', sans-serif;
 font-size: 14px;
 font-style: normal;
 font-weight: 400;
@@ -84,18 +94,20 @@ height: 16px;
 .menu{
   display: flex;
   width: auto;
-  height: 15px;
+  /* height: 15px; */
   flex-direction: column;
   justify-content: center;
+  text-align: center;
   color: var(--Primary---White, #FFF);
-font-family: Amazon Ember;
-font-size: 14px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-margin-left: 24px;
-gap: 24px;
-margin-right: 24px;
+  font-family: 'Amazon Ember', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 24px;
+  gap: 24px;
+  margin-right: 24px;
+  margin-bottom: 0px;
 }
 
 .result {
@@ -104,8 +116,8 @@ margin-right: 24px;
   justify-content: space-between;
   align-items: center;  
   background: #FFF;
-  width: 97%;
-  height: 15px;
+  width: 100%;
+  height: 40px;
   margin-top: -5px;
   background: var(--Primary---White, #FFF);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.09);
@@ -118,4 +130,52 @@ font-size: 14px;
 font-style: normal;
 font-weight: 700;
 line-height: normal;
+}
+
+hr{
+  width: 1020px;
+  height: 2px;
+  background: var(--Secondary---Grey, #DDD);
+}
+
+vl{
+  width: 2px;
+  background: var(--Secondary---Grey, #DDD);
+}
+
+.side-bar{
+  display: flex;
+  flex-direction: column;
+  margin-left: 56px;
+  margin-top: 10px;
+  width: 250px;
+}
+
+.home-page{
+  display: flex;
+  flex-direction: row;
+}
+
+
+.pb,.pr,.pre,.pcr{
+  margin-bottom: 0px;
+}
+
+.form-check{
+  margin-left: 20px;
+}
+
+.review{
+  display: flex;
+}
+
+.all{
+  display: flex;
+height: 40px;
+padding: 13px 10px 13px 9px;
+justify-content: center;
+align-items: flex-start;
+gap: 6px;
+border-radius: 4px 0px 0px 4px;
+background: #F3F3F3;
 }
