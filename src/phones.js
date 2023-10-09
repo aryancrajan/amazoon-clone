@@ -23,6 +23,27 @@ const phones=[
       price:"10,999",
       name:"Nokia",
       rating:4,
+    },
+    {
+      id:4,
+      image:phone1,
+      price:"25,999",
+      name:"Redmi",
+      rating:1,
+    },
+    {
+      id:5,
+      image:phone2,
+      price:"17,999",
+      name:"Poco",
+      rating:2,
+    },
+    {
+      id:6,
+      image:phone3,
+      price:"16,999",
+      name:"Pixel",
+      rating:4,
     }
   ]
 

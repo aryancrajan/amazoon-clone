@@ -20,12 +20,12 @@ function App() {
   const [rating,setRating] = useState('');
 
   const handleRateChange = (event) => {
-    setRating(event.target.value)
-    console.log(event.target.value)
+    setRating(event.currentTarget.value)
+
   }
   const handleFilterChange = (event) => {
     setFilterText(event.target.value);
-    console.log(event.target.value)
+
   };
   
   const ratedPhones = () => {
@@ -78,7 +78,7 @@ function App() {
       <Ribbon />
       <div className='result'>
         <p className='pr'>1-16 of over 2,000 results for <span className='phone'>“phone” </span></p>
-                  <div>
+        <div className='sortby'>
         <label>Sort by:</label>
         <select onChange={handleSortChange}> 
         
@@ -89,6 +89,14 @@ function App() {
       </div> 
       <div className='home-page'>
           <div className='side-bar'>
+              <div  className='category'>
+                  <p className='pb'><b>Category</b></p>
+                  <button className='pb rating'>Smartphones and basic mobiles</button>
+                  <div class="form-check">
+                      <button className='pb rating'>Smartphones</button>
+                  </div>
+                  </div>
+
               <div  className='Brand'>
               <p className='pb'><b>Brand</b></p>
               {brands.length && brands.map((phoneName) => {
@@ -104,19 +112,31 @@ function App() {
               <p className='pcr'><b>Customer Review</b></p>
               {review.length && review.map(({star1,star2,star3,star4,star5,rating}) => {
                 return(
-              <div class="review" value={rating} onClick={handleRateChange}>
+              <div class="review">
+                <button className='rating' value={rating} onClick={handleRateChange}>
                 <img className="star-review" src={star1} alt="star"/>
                 <img className="star-review" src={star2} alt="star"/>
                 <img className="star-review" src={star3} alt="star"/>
                 <img className="star-review" src={star4} alt="star"/>
-                <img className="star-review" src={star5} alt="star"/>
-                <p className='pre'>  & up</p>
+                <img className="star-review" src={star5} alt="star"/><p className='pre'>  & up</p>
+                </button>
               </div>)})
                }
             </div>
             <vl />
             <div className='products'>
-              {/* {phones.length && phones.map(({image,name,prize})=>{
+              
+                {ratedPhones().map((phone)=>{
+                return(
+                  <div>
+                  <Phone pic={phone.image} name={phone.name} price={phone.price}/> <hr /></div>)
+
+                })
+              } 
+              {/* {sortPhones().map((phone) => (
+            <Phone pic={phone.image} name={phone.name} price={phone.price}/>
+        ))} */}
+        {/* {phones.length && phones.map(({image,name,prize})=>{
                 return(
                   <div>
               <Phone pic={image} name={name} price={prize}/> <hr /></div>)
@@ -124,23 +144,13 @@ function App() {
                 })
               } */}
 
-              {filteredPhones().map((phone)=>{
+              {/* {filteredPhones().map((phone)=>{
                 return(
                   <div>
               <Phone pic={phone.image} name={phone.name} price={phone.price}/> <hr /></div>)
 
                 })
-              } 
-                {/* {ratedPhones().map((phone)=>{
-                return(
-                  <div>
-                  <Phone pic={phone.image} name={phone.name} price={phone.price}/> <hr /></div>)
-
-                })
               }  */}
-              {/* {sortPhones().map((phone) => (
-            <Phone pic={phone.image} name={phone.name} price={phone.price}/>
-        ))} */}
 
             </div>
       </div>

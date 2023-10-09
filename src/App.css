@@ -159,6 +159,8 @@ vl{
 
 .pb,.pr,.pre,.pcr{
   margin-bottom: 0px;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
 }
 
 .form-check{
@@ -167,6 +169,7 @@ vl{
 
 .review{
   display: flex;
+  display: inline;
 }
 
 .all{
@@ -178,4 +181,15 @@ align-items: flex-start;
 gap: 6px;
 border-radius: 4px 0px 0px 4px;
 background: #F3F3F3;
+}
+
+.rating{
+  display: flex;
+  border: none;
+  background-color: white;
+  display: inline;
+}
+
+.sortby{
+  color: #C45500;
 }
